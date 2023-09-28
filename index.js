@@ -6,6 +6,9 @@ const axios = require("axios");
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("welcome to the proxy api");
+});
 app.get("/maindata", (req, res) => {
   axios
     .get(
